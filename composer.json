@@ -1,0 +1,26 @@
+{
+    "name": "roksta/ipay",
+    "description": "iPay implementation in kenya.",
+    "type": "library",
+    "keywords": ["ipay", "mpesa", "payments"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sam_roksta",
+            "email": "roksta21@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Roksta\\IPay\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Roksta\\IPay\\Providers\\IPayServiceProvider"],
+            "aliases": {
+                "Debugbar": "Roksta\\IPay\\Facades\\IPay"
+            }
+        }
+    }
+}
