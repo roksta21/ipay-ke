@@ -1,5 +1,5 @@
 {
-    "name": "roksta/ipay",
+    "name": "roksta/ipay-ke",
     "description": "iPay implementation in kenya.",
     "type": "library",
     "keywords": ["ipay", "mpesa", "payments"],
