@@ -2,10 +2,12 @@
 
 namespace Roksta\IPay;
 
-class IPay
+use Illuminate\Support\Facades\Facade;
+
+class IPay extends Facade
 {
-    public function test()
-    {
-        echo "works";
-    }
+   protected static function getFacadeAccessor()
+   {
+      return 'ipay';
+   }
 }
