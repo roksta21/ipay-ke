@@ -1,10 +1,10 @@
 <?php
 
-namespace Roksta\IPay\Providers;
+namespace App\IPay\Providers;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
-use Roksta\IPay\IPayMain;
+use App\IPay\IPayMain;
 
 class IPayServiceProvider extends ServiceProvider
 {
@@ -18,10 +18,6 @@ class IPayServiceProvider extends ServiceProvider
         App::bind('ipay',function() {
             return new IPayMain;
         });
-
-        $this->mergeConfigFrom(
-            __DIR__.'/../config/ipay.php', 'ipay'
-        );
     }
 
     /**
@@ -31,8 +27,6 @@ class IPayServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../config/ipay.php' => config_path('ipay.php'),
-        ]);
+        
     }
 }
